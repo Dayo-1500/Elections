@@ -1,4 +1,4 @@
-<?php
+<?php                     //This is part of question one, the backend part.
 
 $servername="localhost";
 $username="id17048003_gahs";
