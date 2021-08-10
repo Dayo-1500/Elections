@@ -1,5 +1,5 @@
 <?php session_start();?>
-<!DOCTYPE html>
+<!DOCTYPE html>         //This is part of question one, the frontend part.
 <html>
 <head>
 <title>  2011 Elections</title>
