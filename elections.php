@@ -1,5 +1,5 @@
-<?php session_start();?>
-<!DOCTYPE html>         //This is part of question one, the frontend part.
+<?php session_start();?> //This is the frontend part of question one.
+<!DOCTYPE html>
 <html>
 <head>
 <title>  2011 Elections</title>
@@ -74,51 +74,71 @@ include 'server_showpollingunit.php';
 <br><br><br>
 <label> <u> Registered Parties </u></label><br>
 <label for="PDP"> PDP: <span> 
-<?php echo $_SESSION['PDP']; 
-if(empty($_SESSION['PDP'])) {echo "Null";}?> </span>
+<?php if(isset ($_POST['show_partyresult']))
+
+{echo $_SESSION['PDP'];}
+
+if((isset ($_POST['show_partyresult'])) && (empty($_SESSION['PDP']))) {echo "Null";}?> </span>
 </label><br>
 
 <label for="DPP"> DPP: <span> 
-<?php echo $_SESSION['DPP'];
-if(empty($_SESSION['DPP'])) {echo "Null";}?> </span>
+<?php 
+if(isset ($_POST['show_partyresult']))
+{echo $_SESSION['DPP'];}
+if((isset ($_POST['show_partyresult'])) && (empty($_SESSION['DPP']))) {echo "Null";}?> </span>
 </label><br>
 
 <label for="ACN"> ACN: <span>
-<?php echo $_SESSION['ACN']; 
-if(empty($_SESSION['ACN'])) {echo "Null";}?> </span>
+<?php 
+if(isset ($_POST['show_partyresult']))
+{echo $_SESSION['ACN']; }
+if((isset ($_POST['show_partyresult'])) && (empty($_SESSION['ACN']))) {echo "Null";}?> </span>
 </label><br>
 
 <label for="PPA"> PPA: <span>
-<?php echo $_SESSION['PPA'];
-if(empty($_SESSION['PPA'])) {echo "Null";}?> </span>
+<?php 
+if(isset ($_POST['show_partyresult']))
+{echo $_SESSION['PPA'];}
+if((isset ($_POST['show_partyresult'])) && (empty($_SESSION['PPA']))) {echo "Null";}?> </span>
 </label><br>
 
 <label for="CDC"> CDC: <span>
-<?php echo $_SESSION['CDC']; 
-if(empty($_SESSION['CDC'])) {echo "Null";}?> </span>
+<?php 
+if(isset ($_POST['show_partyresult']))
+{echo $_SESSION['CDC'];} 
+if((isset ($_POST['show_partyresult'])) && (empty($_SESSION['CDC']))) {echo "Null";}?> </span>
 </label><br>
 
 <label for="JP"> JP: <span>
-<?php echo $_SESSION['JP']; 
-if(empty($_SESSION['JP'])) {echo "Null";}?> </span>
+<?php 
+if(isset ($_POST['show_partyresult']))
+{echo $_SESSION['JP']; }
+if((isset ($_POST['show_partyresult'])) && (empty($_SESSION['JP']))) {echo "Null";}?> </span>
 </label><br>
 
 <label for="ANPP"> ANPP: <span>
-<?php echo $_SESSION['ANPP']; 
-if(empty($_SESSION['ANPP'])) {echo "Null";}?> </span>
+<?php 
+if(isset ($_POST['show_partyresult']))
+{echo $_SESSION['ANPP'];} 
+if((isset ($_POST['show_partyresult'])) && (empty($_SESSION['ANPP']))) {echo "Null";}?> </span>
 </label><br>
 
 <label for="LABOUR"> LABOUR: <span>
-<?php echo $_SESSION['LABOUR']; 
-if(empty($_SESSION['LABOUR'])) {echo "Null";}?> </span>
+<?php 
+if(isset ($_POST['show_partyresult']))
+{echo $_SESSION['LABOUR'];} 
+if((isset ($_POST['show_partyresult'])) && (empty($_SESSION['LABOUR']))) {echo "Null";}?> </span>
 </label><br>
 
 <label for="CPP"> CPP: <span>
-<?php echo $_SESSION['CPP']; 
-if(empty($_SESSION['CPP'])) {echo "Null";}?> </span>
+<?php 
+if(isset ($_POST['show_partyresult']))
+{echo $_SESSION['CPP'];} 
+if((isset ($_POST['show_partyresult'])) && (empty($_SESSION['CPP']))) {echo "Null";}?> </span>
 </label><br>
 
 </div>
+
 
 
 </body>
