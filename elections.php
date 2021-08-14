@@ -1,8 +1,8 @@
-<?php session_start();?> //This is the frontend part of question one.
+<?php session_start();?>    //This is the frontend part of question one
 <!DOCTYPE html>
 <html>
 <head>
-<title>  2011 Elections</title>
+<title>  Elections</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="keywords" content="2011 elections">
 <meta charset="UTF-8">
@@ -38,7 +38,7 @@ include 'server_showpollingunit.php';
 
 
 <header>
-<h1> Election Results 2011</h1>
+<h2> Election Results</h2>
 </header>
 
 <h6 style="font-size:1em;" font-family:arial sans-serif; text-align:center;"> Question one</h6>
@@ -73,73 +73,85 @@ include 'server_showpollingunit.php';
 
 <br><br><br>
 <label> <u> Registered Parties </u></label><br>
-<label for="PDP"> PDP: <span> 
+
+<label for="JP">JP:</label>
+<span>
+<?php 
+if(isset ($_POST['show_partyresult']))
+{echo $_SESSION['JP']; }
+if((isset ($_POST['show_partyresult'])) && (empty($_SESSION['JP']))) {echo "Null";}?> </span>
+<br>
+
+<label for="PDP"> PDP:</label>
+<span> 
 <?php if(isset ($_POST['show_partyresult']))
 
 {echo $_SESSION['PDP'];}
 
 if((isset ($_POST['show_partyresult'])) && (empty($_SESSION['PDP']))) {echo "Null";}?> </span>
-</label><br>
+<br>
 
-<label for="DPP"> DPP: <span> 
+<label for="DPP">DPP:</label>
+<span> 
 <?php 
 if(isset ($_POST['show_partyresult']))
 {echo $_SESSION['DPP'];}
 if((isset ($_POST['show_partyresult'])) && (empty($_SESSION['DPP']))) {echo "Null";}?> </span>
-</label><br>
+<br>
 
-<label for="ACN"> ACN: <span>
+<label for="ACN">ACN:</label>
+<span>
 <?php 
 if(isset ($_POST['show_partyresult']))
 {echo $_SESSION['ACN']; }
 if((isset ($_POST['show_partyresult'])) && (empty($_SESSION['ACN']))) {echo "Null";}?> </span>
-</label><br>
+<br>
 
-<label for="PPA"> PPA: <span>
+<label for="PPA">PPA:</label>
+<span>
 <?php 
 if(isset ($_POST['show_partyresult']))
 {echo $_SESSION['PPA'];}
 if((isset ($_POST['show_partyresult'])) && (empty($_SESSION['PPA']))) {echo "Null";}?> </span>
-</label><br>
+<br>
 
-<label for="CDC"> CDC: <span>
+<label for="CDC">CDC:</label>
+<span>
 <?php 
 if(isset ($_POST['show_partyresult']))
 {echo $_SESSION['CDC'];} 
 if((isset ($_POST['show_partyresult'])) && (empty($_SESSION['CDC']))) {echo "Null";}?> </span>
-</label><br>
+<br>
 
-<label for="JP"> JP: <span>
-<?php 
-if(isset ($_POST['show_partyresult']))
-{echo $_SESSION['JP']; }
-if((isset ($_POST['show_partyresult'])) && (empty($_SESSION['JP']))) {echo "Null";}?> </span>
-</label><br>
-
-<label for="ANPP"> ANPP: <span>
-<?php 
-if(isset ($_POST['show_partyresult']))
-{echo $_SESSION['ANPP'];} 
-if((isset ($_POST['show_partyresult'])) && (empty($_SESSION['ANPP']))) {echo "Null";}?> </span>
-</label><br>
-
-<label for="LABOUR"> LABOUR: <span>
-<?php 
-if(isset ($_POST['show_partyresult']))
-{echo $_SESSION['LABOUR'];} 
-if((isset ($_POST['show_partyresult'])) && (empty($_SESSION['LABOUR']))) {echo "Null";}?> </span>
-</label><br>
-
-<label for="CPP"> CPP: <span>
+<label for="CPP">CPP:</label>
+<span>
 <?php 
 if(isset ($_POST['show_partyresult']))
 {echo $_SESSION['CPP'];} 
 if((isset ($_POST['show_partyresult'])) && (empty($_SESSION['CPP']))) {echo "Null";}?> </span>
-</label><br>
+<br>
+
+<label for="ANPP">ANPP: </label>
+<span>
+<?php 
+if(isset ($_POST['show_partyresult']))
+{echo $_SESSION['ANPP'];} 
+if((isset ($_POST['show_partyresult'])) && (empty($_SESSION['ANPP']))) {echo "Null";}?> </span>
+<br>
+
+<label for="LABOUR">LABOUR: 
+</label>
+<span>
+<?php 
+if(isset ($_POST['show_partyresult']))
+{echo $_SESSION['LABOUR'];} 
+if((isset ($_POST['show_partyresult'])) && (empty($_SESSION['LABOUR']))) {echo "Null";}?> </span>
+<br>
+
 
 </div>
 
-
+<footer style="text-align: center;"> Created by Dayo Abdul ©2021 </footer>
 
 </body>
 </html>
